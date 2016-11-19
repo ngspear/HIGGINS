@@ -1,1 +1,0 @@
-Is the transport upstream or downstream of the delivery point? 
