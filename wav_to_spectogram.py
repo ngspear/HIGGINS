@@ -76,7 +76,7 @@ def plotstft(audiopath, binsize=2**10, plotpath=None, colormap="jet"):
     xlocs = np.float32(np.linspace(0, timebins-1, 5))
     timeMultiplier = range(0, len(freq))
     plt.xticks(xlocs, ["%.02f" % l for l in ((xlocs*len(samples)/timebins)+(0.5*binsize))/samplerate])
-    np.savetxt(path.join(path.dirname(audiopath), 'timeArray.txt'), ((np.linspace(0, len(freq))*len(samples)/timebins)+(0.5*binsize))/samplerate)
+    np.savetxt(path.join(path.dirname(audiopath), 'timeArray.txt'), ((np.arange(len(freq))*len(samples)/timebins)+(0.5*binsize))/samplerate)
     ylocs = np.int16(np.round(np.linspace(0, freqbins-1, 10)))
     plt.yticks(ylocs, ["%.02f" % freq[i] for i in ylocs])
     
