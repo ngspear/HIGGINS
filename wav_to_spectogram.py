@@ -1,5 +1,3 @@
-
-
 #!/usr/bin/env python
 #coding: utf-8
 """ This work is licensed under a Creative Commons Attribution 3.0 Unported License.
@@ -9,6 +7,7 @@ import numpy as np
 from matplotlib import pyplot as plt
 import scipy.io.wavfile as wav
 from numpy.lib import stride_tricks
+from os import path, walk, makedirs
 
 """ short time fourier transform of audio signal """
 def stft(sig, frameSize, overlapFac=0.5, window=np.hanning):
@@ -85,4 +84,22 @@ def plotstft(audiopath, binsize=2**10, plotpath=None, colormap="jet"):
         
     plt.clf()
 
-plotstft("my_audio_file.wav")
+for root,dirs,files in walk("Sample_Audio_Files"):
+    for file in files:
+        if file.endswith(".wav"):
+            dir = path.join("Generated_Data", path.basename(file))
+            filename = path.splitext(file)[0] + ".png"
+            if not path.exists(dir):
+                makedirs(dir)
+            plotstft(path.join(root,file), plotpath=path.join(dir, filename))
+            for new_root, new_dirs, new_files in walk(path.join(root)):
+                for new_file in new_files:
+                    if new_file.endswith("prompts-original"):
+                        with open(path.join(new_root, new_file), "r") as f:
+                            for line in f:
+                                if line.startswith(path.splitext(file)[0]):
+                                    with open(path.join(dir, "prompt.txt"), "a") as prompt_file:
+                                        prompt_file.write(line.replace(path.splitext(file)[0] + " ", ""))
+
+
+
