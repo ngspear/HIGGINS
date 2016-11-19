@@ -1,0 +1,63 @@
+/usr/local/bin/HVite -A -D -T 1 -l * -a -b SENT-END -m -C /data/svn-mirror/Main/VoxForge/lib/Corpus/Quarantine/Submission/Audio/wav_config -H /data/svn-mirror/Nightly_Builds/AcousticModel-2016-11-10/HTK/16kHz_16bit/MFCC_O_D/macros -H /data/svn-mirror/Nightly_Builds/AcousticModel-2016-11-10/HTK/16kHz_16bit/MFCC_O_D/hmmdefs -m -t 250.0 150.0 1000.0 -I /tmp/zi0poALoxo/words.mlf -i /tmp/zi0poALoxo/aligned.out -S /tmp/zi0poALoxo/fileList /data/svn-mirror/SpeechCorpus/Trunk/Lexicon/VoxForge/VoxForgeDict /data/svn-mirror/Nightly_Builds/AcousticModel-2016-11-10/HTK/16kHz_16bit/MFCC_O_D/tiedlist 
+
+HTK Configuration Parameters[11]
+  Module/Tool     Parameter                  Value
+#                 NUMCEPS                       12
+#                 CEPLIFTER                     22
+#                 NUMCHANS                      26
+#                 PREEMCOEF               0.970000
+#                 USEHAMMING                  TRUE
+#                 WINDOWSIZE         250000.000000
+#                 SAVEWITHCRC                 TRUE
+#                 SAVECOMPRESSED              TRUE
+#                 TARGETRATE         100000.000000
+#                 TARGETKIND          MFCC_D_N_Z_0
+#                 SOURCEFORMAT                 WAV
+
+Read 16007 physical / 24402 logical HMMs
+Label file will be used to align each file
+Aligning File: /tmp/zi0poALoxo/gmureddu-20161030-img/ar-01.wav
+Created lattice with 17 nodes / 16 arcs from label file
+SENT-END ONCE THERE WAS A YOUNG RAT NAMED ARTHUR WHO NEVER COULD MAKE UP HIS MIND SENT-END  ==  [736 frames] -58.0523 [Ac=-42726.5 LM=0.0] (Act=13.3)
+Aligning File: /tmp/zi0poALoxo/gmureddu-20161030-img/ar-02.wav
+Created lattice with 16 nodes / 15 arcs from label file
+SENT-END WHENEVER HIS FRIENDS ASKED HIM IF HE WOULD LIKE TO GO OUT WITH THEM SENT-END  ==  [586 frames] -59.1408 [Ac=-34656.5 LM=0.0] (Act=13.6)
+Aligning File: /tmp/zi0poALoxo/gmureddu-20161030-img/ar-03.wav
+Created lattice with 16 nodes / 15 arcs from label file
+SENT-END HE WOULD ONLY ANSWER I DON'T KNOW HE WOULDN'T SAY YES OR NO EITHER SENT-END  ==  [873 frames] -57.3482 [Ac=-50065.0 LM=0.0] (Act=9.5)
+Aligning File: /tmp/zi0poALoxo/gmureddu-20161030-img/ar-04.wav
+Created lattice with 15 nodes / 14 arcs from label file
+SENT-END HE WOULD ALWAYS SHIRK MAKING A CHOICE HIS AUNT HELEN SAID TO HIM SENT-END  ==  [761 frames] -57.5364 [Ac=-43785.2 LM=0.0] (Act=14.3)
+Aligning File: /tmp/zi0poALoxo/gmureddu-20161030-img/ar-05.wav
+Created lattice with 19 nodes / 18 arcs from label file
+SENT-END NOW LOOK HERE NO ONE IS GOING TO CARE FOR YOU IF YOU CARRY ON LIKE THIS SENT-END  ==  [761 frames] -56.8054 [Ac=-43228.9 LM=0.0] (Act=12.2)
+Aligning File: /tmp/zi0poALoxo/gmureddu-20161030-img/ar-06.wav
+Created lattice with 12 nodes / 11 arcs from label file
+SENT-END YOU HAVE NO MORE MIND THAN A BLADE OF GRASS SENT-END  ==  [486 frames] -56.0132 [Ac=-27222.4 LM=0.0] (Act=11.7)
+Aligning File: /tmp/zi0poALoxo/gmureddu-20161030-img/ar-07.wav
+Created lattice with 14 nodes / 13 arcs from label file
+SENT-END ONE RAINY DAY THE RATS HEARD A GREAT NOISE IN THE LOFT SENT-END  ==  [698 frames] -56.4804 [Ac=-39423.4 LM=0.0] (Act=14.0)
+Aligning File: /tmp/zi0poALoxo/gmureddu-20161030-img/rp-29.wav
+Created lattice with 11 nodes / 10 arcs from label file
+SENT-END SINCE RED AND GREEN LIGHT WHEN MIXED FORM YELLOW SENT-END  ==  [673 frames] -55.1649 [Ac=-37126.0 LM=0.0] (Act=10.5)
+Aligning File: /tmp/zi0poALoxo/gmureddu-20161030-img/rp-30.wav
+Created lattice with 16 nodes / 15 arcs from label file
+SENT-END THIS IS A VERY COMMON TYPE OF BOW ONE SHOWING MAINLY RED AND YELLOW SENT-END  ==  [848 frames] -55.9990 [Ac=-47487.2 LM=0.0] (Act=13.0)
+Aligning File: /tmp/zi0poALoxo/gmureddu-20161030-img/rp-31.wav
+Created lattice with 9 nodes / 8 arcs from label file
+SENT-END WITH LITTLE OR NO GREEN OR BLUE SENT-END  ==  [436 frames] -54.6327 [Ac=-23819.9 LM=0.0] (Act=11.0)
+
+HTK Configuration Parameters[11]
+  Module/Tool     Parameter                  Value
+                  NUMCEPS                       12
+                  CEPLIFTER                     22
+                  NUMCHANS                      26
+                  PREEMCOEF               0.970000
+                  USEHAMMING                  TRUE
+                  WINDOWSIZE         250000.000000
+                  SAVEWITHCRC                 TRUE
+                  SAVECOMPRESSED              TRUE
+                  TARGETRATE         100000.000000
+                  TARGETKIND          MFCC_D_N_Z_0
+                  SOURCEFORMAT                 WAV
+

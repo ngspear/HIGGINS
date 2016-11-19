@@ -83,6 +83,7 @@ def plotstft(audiopath, binsize=2**10, plotpath=None, colormap="jet"):
         plt.show()
         
     plt.clf()
+    plt.close('all')
 
 for root,dirs,files in walk("Sample_Audio_Files"):
     for file in files:
@@ -92,7 +93,7 @@ for root,dirs,files in walk("Sample_Audio_Files"):
             if not path.exists(dir):
                 makedirs(dir)
             plotstft(path.join(root,file), plotpath=path.join(dir, filename))
-            for new_root, new_dirs, new_files in walk(path.join(root)):
+            for new_root, new_dirs, new_files in walk(path.dirname(path.join(root))):
                 for new_file in new_files:
                     if new_file.endswith("prompts-original"):
                         with open(path.join(new_root, new_file), "r") as f:
