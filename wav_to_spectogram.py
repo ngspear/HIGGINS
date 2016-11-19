@@ -60,6 +60,8 @@ def plotstft(audiopath, binsize=2**10, plotpath=None, colormap="jet"):
     
     sshow, freq = logscale_spec(s, factor=1.0, sr=samplerate)
     ims = 20.*np.log10(np.abs(sshow)/10e-6) # amplitude to decibel
+    np.savetxt(path.join(path.dirname(audiopath), 'freqArray.txt'), freq)
+    #np.savetxt(path.join(path.dirname(audiopath), 'samplerateArray.txt'), samplerate)
     
     timebins, freqbins = np.shape(ims)
     
@@ -74,6 +76,9 @@ def plotstft(audiopath, binsize=2**10, plotpath=None, colormap="jet"):
 
     xlocs = np.float32(np.linspace(0, timebins-1, 5))
     plt.xticks(xlocs, ["%.02f" % l for l in ((xlocs*len(samples)/timebins)+(0.5*binsize))/samplerate])
+    with open("testforgarrett.txt", "a") as f:
+        for i in range(0,len(freq)):
+            f.write(str(((i*len(samples)/timebins)+(0.5*binsize))/samplerate))
     ylocs = np.int16(np.round(np.linspace(0, freqbins-1, 10)))
     plt.yticks(ylocs, ["%.02f" % freq[i] for i in ylocs])
     
