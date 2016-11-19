@@ -1,2 +1,2 @@
 # HIGINS
-Highly Intelligent Generalized Information and Noetic System
+## Highly Intelligent Generalized Information and Noetic System
